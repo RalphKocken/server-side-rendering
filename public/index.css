@@ -1,0 +1,492 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS */
+
+:root{
+--secondary-bg-color: #E5F6DF;
+--main-text-color: black;
+--main-text-font: 'PT Sans', sans-serif;
+--title-text-color: #654321;
+}
+
+@font-face{
+  font-family: Positive Attitude;
+  src: url('../assets/PositiveAttitude.ttf')
+}
+
+@font-face{
+  font-family: Never Give Up;
+  src: url('../assets/NeverGiveUp.ttf')
+}
+
+/* FONT-SIZES */
+
+.title-text{
+  font-size: 32px;
+  color: var(--title-text-color)
+}
+
+.subtitle-text{
+  font-size: 24px;
+  color: var(--title-text-color)
+}
+
+.regular-text{
+  font-size: 16px;
+}
+
+/* BODY */
+
+body{
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(right, #FFFFFF, #E5F6DF);
+  background: -moz-linear-gradient(right, #FFFFFF, #E5F6DF);
+  background: linear-gradient(to left, #FFFFFF, #E5F6DF);
+  font-family: var(--main-text-font);
+  color: var(--main-text-color);
+  line-height: 140%;
+}
+
+/* HEADER */
+
+.buurtcampus-logo{
+  display: block;
+  width: 14rem;
+  margin: 1rem auto 0 1rem;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 768px;
+}
+
+.homepage-images{
+  margin: 0 auto 0 auto;
+  width: 100%;
+  height: 16rem;
+  position: relative;
+}
+
+.homepage-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.show-homepage-image{
+  opacity: 1;
+}
+
+.logo-wrapper{
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid rgba(173, 255, 185, 0.25);
+  box-shadow: rgba(173, 255, 185, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.plant-swap-logo-animated{
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+}
+
+.logo-part{
+  position: absolute;
+}
+
+.left-part{
+  width: 0%;
+  height: 0%;
+  right: 49%;
+  bottom: 60%;
+  animation: grow-left-leaf 1.2s ease-in forwards 2.4s;
+}
+
+.right-part{
+  width: 0%;
+  height: 0%;
+  left: 50%;
+  bottom: 60%;
+  animation: grow-right-leaf 1.6s ease-in forwards 1.4s;
+}
+
+.bottom-part{
+  width: 100%;
+  opacity: 0%;
+  bottom: 0%;
+  animation: fade-in 1s ease-in forwards 1s;
+}
+
+@keyframes fade-in{
+ from{ 
+  opacity: 0%;
+}
+  to{
+      opacity: 100%;
+  }
+}
+
+@keyframes grow-left-leaf{
+  from{
+      height: 0%;
+      width: 0%;
+  }
+
+  to{
+      height: 40%;
+      width: 25%;
+  }
+}
+
+@keyframes grow-right-leaf{
+  from{
+      height: 0%;
+      width: 0%;
+  }
+  to{
+      height: 50%;
+      width: 25%;
+  }
+}
+
+.banner{
+  font-family: Positive Attitude;
+  margin: 2rem 0 0 0;
+  width: 80%;
+  max-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  color: var(--title-text-color);
+  /* border: 1px solid black; */
+}
+
+.banner-line-1{
+  font-size: 35px;
+  margin: 0;
+}
+
+.banner-line-2{
+  font-size: 80px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.banner-line-3{
+  margin: 0 0 0 auto;
+}
+
+/* MAIN */
+
+.intro{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 35rem;
+}
+
+.intro-title{
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.intro-text{
+  background: #F6F6F8;
+  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
+  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
+  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
+  padding: 1rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.plant-list-title{
+  color: var(--title-text-color);
+  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  border-radius: 8px;
+  max-width: 35rem;
+}
+
+.plant-list{
+  margin: 0.5rem auto 0 auto;
+  max-width: 35rem;
+  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-plant{
+  width: 45%;
+  max-width: 10rem;
+  text-align: center;
+  color: var(--title-text-color);
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
+}
+
+.single-plant > h4{
+  padding: 0.5rem;
+}
+
+.plant-image{
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.text-content-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem auto 0 auto;
+  gap: 2rem;
+}
+
+.temporary-text-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.text-content{
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.text-content p{
+  background: #F6F6F8;
+  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
+  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
+  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  padding: 1rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px; 
+}
+
+.text-content ul{
+  background: #F6F6F8;
+  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
+  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
+  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.text-content ul li{
+  list-style-type: none;
+}
+
+.text-content h2{
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.location-title{
+  width: 100%;
+}
+
+.buurtcampus-googlemaps{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buurtcampus-googlemaps > iframe{
+    max-width: 700px;
+}
+
+footer{
+  text-align: center;  
+  background-color: var(--title-text-color);
+  padding: 1em;
+  color: white;
+}
+
+footer img{
+  width: 100%;
+  max-width: 600px;
+}
+
+
+/* TEST DIALOG OMGEVING DING JOE */
+
+.plant-dialog[open]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  border: none;
+}
+
+.dialog-plant-img{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.dialog-plant-info{
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dialog-plant-info > div{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 45%;
+  height: 10rem;
+  text-align: center;
+}
+
+.dialog-plant-info h2{
+  width: 100%;
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+@media only screen and (min-width: 768px){
+
+  .menu-icon{
+    display: none;
+  }
+
+  header{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: auto;
+    width: 100%;
+    max-width: 75%;
+    margin: 2rem auto 0 auto;
+  }
+
+  .homepage-images{
+    width: 100%;
+    max-width: auto;
+    height: 20rem;
+  }
+
+  .homepage-image{
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .logo-wrapper{
+    width: 10rem;
+    height: 10rem;
+    left: -5rem;
+    top: 5rem;
+  }
+
+  .plant-swap-logo-animated{
+    width: 8rem;
+    height: 4rem;
+  }
+
+  .banner{
+    width: 30%;
+  }
+
+  .banner-line-1{
+    font-size: 60px;
+  }
+
+  .banner-line-2{
+    font-size: 100px;
+  }
+
+  .banner-line-3{
+    margin: 0 0 0 50%;
+  }
+  
+  .intro{
+    width: 50%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .plant-list{
+    max-width: 90%;
+    margin: 2rem auto 0 auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .plant-list-title{
+    width: 80%;
+    max-width: 80%;
+    margin: 5rem auto 0 auto;
+  }
+
+  .single-plant{
+    width: 25rem;
+    max-width: 25rem;
+  }
+
+  .text-content-container{
+    margin: 5rem auto 0 auto;
+  }
+
+  .buurtcampus-googlemaps{
+    width: 40rem;
+    max-width: 40rem;
+  }
+}

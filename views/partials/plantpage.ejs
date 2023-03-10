@@ -1,0 +1,34 @@
+
+<% stekjes.forEach(stekje => { %>
+    <dialog id="<%= stekje.id %>" class="plant-dialog">
+
+
+    <img class="dialog-plant-img" src="/assets/images/plant(9).avif"> 
+
+        <section class="dialog-plant-info">
+
+            <h2><%= stekje.naam %></h2>
+
+            <div>
+                <h3>Land van Herkomst</h3>
+                <p><%= stekje.landvanherkomst %></p>
+            </div>
+
+            <div>
+                <h3>Giftig?</h3>
+                <p><%= stekje.giftig %></p>
+            </div>
+
+            <div>
+                <h3>Voeding</h3>
+                <p><%= stekje.voeding %></p>
+            </div>
+
+            <div>
+                <h3>Verpotten</h3>
+                <p><%= stekje.voeding %></p>
+            </div>
+
+        </section>   
+    </dialog>
+<% }) %>
