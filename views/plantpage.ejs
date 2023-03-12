@@ -1,0 +1,27 @@
+<%- include('./partials/head.ejs') %>
+<%- include('./partials/nav.ejs') %>
+
+<section class="plant-page-header">
+    <h1 class="plant-page-plant-title"><%= stekje.naam %></h1>    
+    <img class="plant-page-plant-image" src="/assets/images/plant(9).avif">
+</section>
+
+<section class="plant-page-plant-info">
+    <section class="plant-page-plant-food">
+        <h3>Herkomst</h3>
+        <p><%= stekje.landvanherkomst %></p>    
+    </section>
+
+    <section class="plant-page-plant-food">
+        <h3>Voeding</h3>
+        <p><%= stekje.voeding %></p>    
+    </section>
+
+    <section class="plant-page-plant-food">
+        <h3>Verpotten</h3>
+        <p><%= stekje.verpotten %></p>    
+    </section>
+
+</section>
+
+<%- include('./partials/foot.ejs') %>

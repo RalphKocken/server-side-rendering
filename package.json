@@ -5,30 +5,32 @@
     "main": "index.js",
     "type": "module",
     "directories": {
-      "doc": "docs"
+        "doc": "docs"
     },
     "scripts": {
-      "start": "node index.js",
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/fdnd-task/server-side-rendering.git"
+        "type": "git",
+        "url": "git+https://github.com/fdnd-task/server-side-rendering.git"
     },
     "keywords": [
-      "node",
-      "express",
-      "ejs"
+        "node",
+        "express",
+        "ejs"
     ],
     "author": "J.P. Sturkenboom <j.p.sturkenboom@hva.nl>",
     "license": "GPL-3.0",
     "bugs": {
-      "url": "https://github.com/fdnd-task/server-side-rendering/issues"
+        "url": "https://github.com/fdnd-task/server-side-rendering/issues"
     },
     "homepage": "https://github.com/fdnd-task/server-side-rendering#readme",
     "dependencies": {
-      "dotenv": "^16.0.3",
-      "ejs": "^3.1.8",
-      "express": "^4.18.2"
+        "dotenv": "^16.0.3",
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "fetch": "^1.1.0",
+        "node": "^19.6.1"
     }
-  }
+}

@@ -1,21 +1,22 @@
 <%- include('./partials/head') %>
+<%- include('./partials/nav') %>
 <%- include('./partials/header') %>
-<%- include('./partials/plantpage') %>
-
 <main>
  
 <section class="plant-list-title">
   <h2>Bekijk onze Stekjes</h2>
 </section>
 
-  <section class="plant-list" ">
-    <% stekjes.forEach(stekje => { %>
-      <section class="single-plant" data-id="<%= stekje.id %>" data-name="<%= stekje.naam %>">
-        <img class="plant-image" src="/assets/images/plant(9).avif">
-        <h4><%= stekje.naam %></h4>
-      </section>
-      <% }) %>
-  </section>
+<section class="plant-list">
+  <% stekjes.forEach(stekje => { %>
+      <a href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
+        <section class="single-plant">
+          <img class="plant-image" src="/assets/images/plant(9).avif">
+          <h4><%= stekje.naam %></h4>
+        </section>
+      </a>
+  <% }) %>
+</section>
 
 <section class="text-content-container">
 
