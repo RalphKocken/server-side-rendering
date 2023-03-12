@@ -53,20 +53,28 @@ body{
 /* HEADER */
 
 nav{
+  background-color: var(--secondary-bg-color);
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem 0 1rem 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .nav-plant-swap-logo{
-  margin: 0 auto 0 1rem;
+  display: flex;
+  align-items: center;
+  margin: 0 auto 0 0;
   width: 5rem;
 }
 
 .nav-home-icon{
-  margin: 0 1rem 0 auto;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto;
   color:#654321;
 }
 
@@ -390,7 +398,7 @@ footer img{
 
 .plant-page-header{
   position: relative;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -400,7 +408,7 @@ footer img{
 
 .plant-page-plant-image{
   width: 100%;
-  height: 15rem;
+  height: 25rem;
   object-fit: cover;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
