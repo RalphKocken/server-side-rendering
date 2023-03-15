@@ -3,92 +3,110 @@
   box-sizing: border-box;
 }
 
-/* COLORS */
-
 :root{
---secondary-bg-color: #E5F6DF;
---main-text-color: black;
---main-text-font: 'PT Sans', sans-serif;
---title-text-color: #654321;
+  --main-background-color: linear-gradient(to left, #FFFFFF, #E5F6DF);
+  --main-text-color: #110c11;
+  --main-title-text-color: #654321;
+  --main-text-font: 'PT Sans', sans-serif;
 }
 
-@font-face{
-  font-family: Positive Attitude;
-  src: url('../assets/PositiveAttitude.ttf')
+/* FONTS-SIZES */
+
+h1{
+  font-size: 40px;
 }
 
-@font-face{
-  font-family: Never Give Up;
-  src: url('../assets/NeverGiveUp.ttf')
-}
-
-/* FONT-SIZES */
-
-.title-text{
+h2{
   font-size: 32px;
-  color: var(--title-text-color)
 }
 
-.subtitle-text{
+h3{
   font-size: 24px;
-  color: var(--title-text-color)
+}
+
+h4{
+  font-size: 16px;
 }
 
 .regular-text{
   font-size: 16px;
 }
 
+@font-face{
+  font-family: Positive Attitude;
+  src: url('../assets/fonts/PositiveAttitude.ttf')
+}
+
+/* UTILITY */
+
+.text-box-title{
+  padding: 0.5rem;
+  background-color: white;
+  width: 100%;
+  color: var(--main-title-text-color);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+  margin: 0;
+}
+
+.text-box-text{
+  padding: 1rem;
+  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
+  line-height: 130%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+}
+
+.button-big{
+  font-size: 24px;
+  background-color: #654321;
+  border: none;
+  text-decoration: none;
+  width: 15rem;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 16px;
+  color: white;
+}
+
+.button-small{
+
+}
+
 /* BODY */
 
 body{
-  background: #FFFFFF;
-  background: -webkit-linear-gradient(right, #FFFFFF, #E5F6DF);
-  background: -moz-linear-gradient(right, #FFFFFF, #E5F6DF);
-  background: linear-gradient(to left, #FFFFFF, #E5F6DF);
-  font-family: var(--main-text-font);
+  background: var(--main-background-color);
   color: var(--main-text-color);
-  line-height: 140%;
+  font-family: var(--main-text-font);
+}
+
+/* NAV */
+
+nav{
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: var(--main-background-color);
+}
+
+.nav-plantswap-logo{
+  width: 6rem;
 }
 
 /* HEADER */
-
-nav{
-  background-color: var(--secondary-bg-color);
-  display: flex;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  align-items: center;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
-.nav-plant-swap-logo{
-  display: flex;
-  align-items: center;
-  margin: 0 auto 0 0;
-  width: 5rem;
-}
-
-.nav-home-icon{
-  display: flex;
-  align-items: center;
-  margin: 0 0 0 auto;
-  color:#654321;
-}
-
-.buurtcampus-logo{
-  display: block;
-  width: 14rem;
-  margin: 1rem auto 0 1rem;
-}
 
 header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 768px;
 }
 
 .homepage-images{
@@ -96,6 +114,7 @@ header{
   width: 100%;
   height: 16rem;
   position: relative;
+  padding: 0 0 5rem 0;
 }
 
 .homepage-image{
@@ -111,190 +130,65 @@ header{
   opacity: 1;
 }
 
-.logo-wrapper{
-  position: absolute;
-  left: 3%;
-  top: 5%;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  background-color: white;
-  border-radius: 50%;
-  border: 3px solid rgba(173, 255, 185, 0.25);
-  box-shadow: rgba(173, 255, 185, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-
-.plant-swap-logo-animated{
-  position: relative;
-  width: 4rem;
-  height: 2rem;
-}
-
-.logo-part{
-  position: absolute;
-}
-
-.left-part{
-  width: 0%;
-  height: 0%;
-  right: 49%;
-  bottom: 60%;
-  animation: grow-left-leaf 1.2s ease-in forwards 2.4s;
-}
-
-.right-part{
-  width: 0%;
-  height: 0%;
-  left: 50%;
-  bottom: 60%;
-  animation: grow-right-leaf 1.6s ease-in forwards 1.4s;
-}
-
-.bottom-part{
-  width: 100%;
-  opacity: 0%;
-  bottom: 0%;
-  animation: fade-in 1s ease-in forwards 1s;
-}
-
-@keyframes fade-in{
- from{ 
-  opacity: 0%;
-}
-  to{
-      opacity: 100%;
-  }
-}
-
-@keyframes grow-left-leaf{
-  from{
-      height: 0%;
-      width: 0%;
-  }
-
-  to{
-      height: 40%;
-      width: 25%;
-  }
-}
-
-@keyframes grow-right-leaf{
-  from{
-      height: 0%;
-      width: 0%;
-  }
-  to{
-      height: 50%;
-      width: 25%;
-  }
-}
-
 .banner{
   font-family: Positive Attitude;
-  margin: 2rem 0 0 0;
-  width: 80%;
-  max-width: 20rem;
   display: flex;
   flex-direction: column;
-  line-height: normal;
-  color: var(--title-text-color);
-  /* border: 1px solid black; */
+  color: var(--main-title-text-color);
+  width: 50%;
+  max-width: 20rem;
+  padding: 2rem 0;
 }
 
 .banner-line-1{
-  font-size: 35px;
-  margin: 0;
+  font-size: 40px;
+  margin: 0 auto 0 0;
 }
 
 .banner-line-2{
-  font-size: 80px;
+  font-size: 64px;
   font-weight: 700;
-  text-align: center;
+  margin: 0 auto 0 auto;
 }
 
 .banner-line-3{
+  font-size: 40px;
   margin: 0 0 0 auto;
 }
 
-/* MAIN */
-
 .intro{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 2rem auto 0 auto;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 35rem;
+  width: 80%;
+  max-width: 30rem;
 }
 
-.intro-title{
-  background-color: white;
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
+/* PLANT-LIST */
 
-.intro-text{
-  background: #F6F6F8;
-  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
-  padding: 1rem;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.plant-list-title{
-  color: var(--title-text-color);
-  text-align: center;
-  background-color: white;
-  padding: 1rem;
-  margin: 2rem auto 0 auto;
-  width: 90%;
-  border-radius: 8px;
-  max-width: 35rem;
+.plant-list-container{
+  margin: 5rem 0 0 0 ;
 }
 
 .plant-list{
-  margin: 0.5rem auto 0 auto;
-  max-width: 35rem;
-  gap: 1.5rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
 }
 
-.plant-list a{
-  text-decoration: none;
+.plant-link:hover{
+  transform: scale(1.1);
 }
 
-.single-plant{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.plant-link{
+  width: 40%;
   max-width: 10rem;
-  text-align: center;
-  color: var(--title-text-color);
-  border-radius: 8px;
-  background-color: white;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
-}
-
-.single-plant > h4{
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  height: 5rem;
+  text-decoration: none;
+  color: var(--main-title-text-color);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; ;
+  border-radius: 8px;  
+  transition: 0.2s;
 }
 
 .plant-image{
@@ -303,256 +197,226 @@ header{
   border-top-left-radius: 8px;
 }
 
-.text-content-container{
+.plant-title{
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  margin: 2rem auto 0 auto;
-  gap: 2rem;
-}
-
-.temporary-text-container{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-
-.text-content{
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 22rem;
-}
-
-.text-content p{
-  background: #F6F6F8;
-  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
-  padding: 1rem;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px; 
-}
-
-.text-content ul{
-  background: #F6F6F8;
-  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  text-align: center;
+  background-color: white;
+  height: 5rem;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  padding: 0.5rem;
 }
 
-.text-content ul li{
+/* GENERAL INFORMATION */
+
+.text-content-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  gap: 2rem;
+  margin: 3rem auto 0 auto;
+}
+
+.text-content{
+  max-width: 30rem;
+}
+
+.care-tips-list{
   list-style-type: none;
-}
-
-.text-content h2{
-  text-align: center;
-  padding: 1rem;
-  background-color: white;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.location-title{
-  width: 100%;
 }
 
 .buurtcampus-googlemaps{
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-width: 100%;
 }
 
-.buurtcampus-googlemaps > iframe{
-    max-width: 700px;
-}
+
+/* FOOTER */
 
 footer{
-  text-align: center;  
-  background-color: var(--title-text-color);
-  padding: 1em;
-  color: white;
-  margin: 3rem 0 0 0;
+  margin: 5rem auto 3rem auto;
+  width: 80%;
+  text-align: center;
 }
 
 footer img{
   width: 100%;
-  max-width: 600px;
 }
 
 /* PLANTPAGE */
 
 .plant-page-header{
-  position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 0 auto;
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 .plant-page-plant-image{
   width: 100%;
-  height: 25rem;
-  object-fit: cover;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  max-width: 30rem;
 }
 
 .plant-page-plant-title{
-  width: 100%;
-  padding: 0.5rem;
-  background-color: white;
-  color: #654321;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-  text-align: center;
+  color: var(--main-title-text-color)
 }
 
 .plant-page-plant-info{
   display: flex;
-  gap: 1rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
   width: 80%;
   margin: 2rem auto 0 auto;
 }
 
-.plant-page-plant-info section{
-  width: 100%;
-  background: #F6F6F8;
-  background: -webkit-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: -moz-linear-gradient(right, #F6F6F8, #F1F1F1);
-  background: linear-gradient(to left, #F6F6F8, #F1F1F1);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;  
-}
 
-.plant-page-plant-info section > h3{
-  color: #654321;
-  padding: 0.5rem;
-  text-align: center;
-  background-color: white;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-
-.plant-page-plant-info section > p{
-  padding: 0.5rem;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-@media only screen and (min-width: 768px){
-
-  .menu-icon{
-    display: none;
-  }
-
-  nav{
-    width: 75%;
-  }
+@media only screen and (min-width: 678px){
+  
+  /* HEADER */
 
   header{
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: normal;
     justify-content: center;
-    gap: 1rem;
-    height: auto;
-    width: 100%;
-    max-width: 75%;
-    margin: 0 auto 0 auto;
+    align-items: flex-start;
+    gap: 10%;
   }
 
   .homepage-images{
     width: 100%;
-    max-width: auto;
+    margin: 0 0 2rem 0;
+  }
+
+  .banner{
+    width: 40%;
+    padding: 0;
+  }
+
+  .banner-line-1{
+    font-size: 48px;
+  }
+
+  .banner-line-2{
+    font-size: 72px;
+  }
+
+  .banner-line-3{
+    font-size: 48px;
+  }
+
+  .intro{
+    width: 40%;
+  }
+
+  /* PLANT-LIST */
+
+  :root{
+    --slider-padding: 5rem;
+  }
+
+  .plant-list-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .plant-list{
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 2rem 2rem 2rem 5rem;
+  }
+
+  .plant-link{
+    min-width: 12rem;
+  }
+
+  /* GENERAL INFORMATION */
+
+  .text-content-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .text-content{
+    max-width: 16rem;
+  }
+
+  .buurtcampus-googlemaps{
+    width: 100%;
+
+  }
+
+  /* PLANTPAGE */
+
+  .plant-page-content{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+  }
+
+  .plant-page-header{
+    width: 25rem;
+    margin: 0;
+  }
+
+  .plant-page-plant-image{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .plant-page-plant-title{
+   border-radius: 0;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
+  }
+
+  .plant-page-plant-info{
+    width: 20rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .plant-page-text-content{
+    width: 15rem;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+
+  .homepage-images{
+    max-width: 75%;
     height: 20rem;
   }
 
   .homepage-image{
-    object-fit: cover;
     border-radius: 8px;
   }
 
-  .logo-wrapper{
-    width: 10rem;
-    height: 10rem;
-    left: -5rem;
-    top: 5rem;
-  }
-
-  .plant-swap-logo-animated{
-    width: 8rem;
-    height: 4rem;
-  }
-
-  .banner{
-    margin: 0 auto 0 auto;
-    width: 30%;
-  }
-
   .banner-line-1{
-    font-size: 60px;
+    font-size: 56px;
   }
 
   .banner-line-2{
-    font-size: 100px;
+    font-size: 80px;
   }
 
   .banner-line-3{
-    margin: 0 0 0 50%;
-  }
-  
-  .intro{
-    width: 50%;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .plant-list{
-    max-width: 90%;
-    margin: 2rem auto 0 auto;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    justify-content:flex-start;
-    padding: 1rem;
-  }
-
-  .plant-list-title{
-    width: 80%;
-    max-width: 80%;
-    margin: 5rem auto 0 auto;
-  }
-
-  .single-plant{
-    width: 15rem;
-    max-width: 15rem;
+    font-size: 56px;
   }
 
   .text-content-container{
-    margin: 5rem auto 0 auto;
+    width: 100%;
+  }
+  .text-content{
+    max-width: 18rem;
   }
 
-  .buurtcampus-googlemaps{
-    width: 40rem;
-    max-width: 40rem;
-  }
 }

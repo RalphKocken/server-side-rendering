@@ -1,25 +1,33 @@
 <%- include('./partials/head.ejs') %>
 <%- include('./partials/nav.ejs') %>
 
-<section class="plant-page-header">
-    <img class="plant-page-plant-image" src="/assets/images/plant(9).avif">
-    <h1 class="plant-page-plant-title"><%= stekje.naam %></h1>    
-</section>
+<section class="plant-page-content">
 
-<section class="plant-page-plant-info">
-    <section class="plant-page-plant-food">
-        <h3>Herkomst</h3>
-        <p><%= stekje.landvanherkomst %></p>    
+    <section class="plant-page-header">
+        <img class="plant-page-plant-image" src="/assets/images/plant(9).avif">
+        <h3 class="plant-page-plant-title text-box-title"><%= stekje.naam %></h3>    
     </section>
 
-    <section class="plant-page-plant-food">
-        <h3>Voeding</h3>
-        <p><%= stekje.voeding %></p>    
-    </section>
+    <section class="plant-page-plant-info">
+        <section class="plant-page-plant-food plant-page-text-content">
+            <h4 class="text-box-title">Herkomst</h4>
+            <p class="text-box-text"><%= stekje.landvanherkomst %></p>    
+        </section>
 
-    <section class="plant-page-plant-food">
-        <h3>Verpotten</h3>
-        <p><%= stekje.verpotten %></p>    
+        <section class="plant-page-plant-food plant-page-text-content">
+            <h4 class="text-box-title">Voeding</h4>
+            <p class="text-box-text"><%= stekje.voeding %></p>    
+        </section>
+
+        <section class="plant-page-plant-food plant-page-text-content">
+            <h4 class="text-box-title">Verpotten</h4>
+            <p class="text-box-text"><%= stekje.verpotten %></p>    
+        </section>
+
+        <button class="button-big reserve-plant-button">
+            <p class="reserve-plant-button-text">Deze wil ik!</p>
+        </button>
+
     </section>
 
 </section>

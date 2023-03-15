@@ -1,62 +1,67 @@
 <%- include('./partials/head') %>
 <%- include('./partials/nav') %>
 <%- include('./partials/header') %>
-<main>
- 
-<section class="plant-list-title">
-  <h2>Bekijk onze Stekjes</h2>
-</section>
 
-<section class="plant-list">
-  <% stekjes.forEach(stekje => { %>
-      <a href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
-        <section class="single-plant">
-          <img class="plant-image" src="/assets/images/plant(9).avif">
-          <h4><%= stekje.naam %></h4>
-        </section>
-      </a>
-  <% }) %>
-</section>
+<main> 
 
-<section class="text-content-container">
+    <section class="plant-list-container">  
+      <!-- <section class="handle left-handle"></section> -->
+      <section class="plant-list">
+        <% stekjes.forEach(stekje => { %>
+            <a class="plant-link" href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
+              <img class="plant-image" src="/assets/images/plant(9).avif">
+              <h4 class="plant-title"><%= stekje.naam %></h4>
+            </a>
+        <% }) %>
 
-  <section class="care-tips text-content">
-    <h2 class="subtitle-text care-tips-title">Verzorgingstips</h2>
-    <article class="care-tips-text">
-      <ul class="care-tips-list regular-text">
+        <% stekjes.forEach(stekje => { %>
+          <a class="plant-link" href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
+            <img class="plant-image" src="/assets/images/plant(9).avif">
+            <h4 class="plant-title"><%= stekje.naam %></h4>
+          </a>
+        <% }) %>
+
+        <% stekjes.forEach(stekje => { %>
+          <a class="plant-link" href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
+            <img class="plant-image" src="/assets/images/plant(9).avif">
+            <h4 class="plant-title"><%= stekje.naam %></h4>
+          </a>
+        <% }) %>
+      </section>
+    </section>
+
+  <section class="text-content-container">
+    <section class="care-tips text-content">
+      <h3 class="text-box-title">Verzorgingstips</h3>
+      <ul class="care-tips-list text-box-text">
         <li>Stek je plantjes bij voorkeur in het voorjaar. Er is genoeg licht en warmte om je plantjes goed te laten groeien.</li>
         <li>Maak je plantenpotjes goed schoon voor je gaat stekken, zo ga je schimmelvorming tegen.</li>
         <li>Gebruik een scherpe snoeischaar voor het knippen, ook zo ga je schimmelvorming tegen</li>
         <li>Less is more! 2x per week een scheutje water is meer dan genoeg.</li>
       </ul>
-    </article>
+    </section>
+
+    <section class="about-us text-content">
+      <h3 class="text-box-title">Over Ons</h3>
+      <p class="text-box-text">De Buurtcampus Oost heeft als doel Amsterdam-Oost duurzamer, inclusiever en gezonder te maken. Plant Swap Amsterdam zorgt ervoor dat plantenliefhebbers elkaar ontmoeten in de bibliotheek. Daarnaast hebben planten in huis een positief effect op je lichamelijke en geestelijke gezondheid. Veel mensen weten niet goed hoe ze voor planten moeten zorgen en kopen nieuwe als ze dood gaan. In het kader van duurzaamheid, gezondheid en meer sociale connectie, is PlantSwap Amsterdam een plek van sociale ontmoeting, waar mensen samen leren over planten.</p>
+    </section>
+
+    <section class="Workshops text-content">
+        <h3 class="text-box-title">Workshops</h3>
+        <p class="text-box-text">De eerste workshop ‘Planten stekken en verzorgen’ zal plaatsvinden in maart 2023 in de OBA Linnaeusstraat, meld je hier aan voor meer informatie en om op de hoogte te blijven.</p>
+    </section>
+
+    <section class="donate-plant text-content">
+      <h3 class="text-box-title">Plantje doneren</h3>
+      <p class="text-box-text">Heb jij (net als wij) teveel planten in huis? Wij zijn super blij als je stekjes komt doneren. Je kunt ze aanmelden via de app en daarna neerzetten in de PlantSwap kast in de bieb.</p>
+    </section>
+
+    <section class="buurtcampus-googlemaps text-content">
+      <h3 class="text-box-title">Locatie</h3>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.6761957784674!2d4.92404451559515!3d52.358157855963306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60976cd336d71%3A0x6610b420a3c48f0e!2sLinnaeusstraat%2044%2C%201092%20CL%20Amsterdam!5e0!3m2!1snl!2snl!4v1667915508745!5m2!1snl!2snl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
   </section>
 
-  <section class="about-us text-content">
-    <h2 class="subtitle-text">Over Ons</h2>
-    <p>De Buurtcampus Oost heeft als doel Amsterdam-Oost duurzamer, inclusiever en gezonder te maken. Plant Swap Amsterdam zorgt ervoor dat plantenliefhebbers elkaar ontmoeten in de bibliotheek. Daarnaast hebben planten in huis een positief effect op je lichamelijke en geestelijke gezondheid. Veel mensen weten niet goed hoe ze voor planten moeten zorgen en kopen nieuwe als ze dood gaan. In het kader van duurzaamheid, gezondheid en meer sociale connectie, is PlantSwap Amsterdam een plek van sociale ontmoeting, waar mensen samen leren over planten.</p>
-  </section>
-
-  <section class="temporary-text-container">
-  <section class="Workshops text-content">
-    <h2 class="subtitle-text">Workshops</h2>
-    <p>De eerste workshop ‘Planten stekken en verzorgen’ zal plaatsvinden in maart 2023 in de OBA Linnaeusstraat, meld je hier aan voor meer informatie en om op de hoogte te blijven.</p>
-  </section>
-
-  <section class="donate-plant text-content">
-    <h2 class="subtitle-text">Plantje doneren</h2>
-    <p>De eerste workshop ‘Planten stekken en verzorgen’ zal plaatsvinden in maart 2023 in de OBA Linnaeusstraat, meld je hier aan voor meer informatie en om op de hoogte te blijven.</p>
-  </section>
-
-  </section>
-
-  <section class="buurtcampus-googlemaps text-content">
-    <h2 class="location-title subtitle-text">Locatie</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.6761957784674!2d4.92404451559515!3d52.358157855963306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60976cd336d71%3A0x6610b420a3c48f0e!2sLinnaeusstraat%2044%2C%201092%20CL%20Amsterdam!5e0!3m2!1snl!2snl!4v1667915508745!5m2!1snl!2snl" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
-
-</section>
-
-
-
+</main>
 <%- include('./partials/foot') %>
