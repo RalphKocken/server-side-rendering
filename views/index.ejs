@@ -9,21 +9,21 @@
       <section class="plant-list">
         <% stekjes.forEach(stekje => { %>
             <a class="plant-link" href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
-              <img class="plant-image" src="/assets/images/plant(9).avif">
+              <img class="plant-image" src="<%= stekje.fotos[0].url%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
               <h4 class="plant-title"><%= stekje.naam %></h4>
             </a>
         <% }) %>
 
         <% stekjes.forEach(stekje => { %>
           <a class="plant-link" href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
-            <img class="plant-image" src="/assets/images/plant(9).avif">
+            <img class="plant-image" src="<%= stekje.fotos[0].url%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
             <h4 class="plant-title"><%= stekje.naam %></h4>
           </a>
         <% }) %>
 
         <% stekjes.forEach(stekje => { %>
           <a class="plant-link" href="/plantpage/?stekjeSlug=<%= stekje.slug %>">
-            <img class="plant-image" src="/assets/images/plant(9).avif">
+            <img class="plant-image" src="<%= stekje.fotos[0].url%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>" loading="lazy">
             <h4 class="plant-title"><%= stekje.naam %></h4>
           </a>
         <% }) %>

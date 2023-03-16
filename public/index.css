@@ -8,6 +8,7 @@
   --main-text-color: #110c11;
   --main-title-text-color: #654321;
   --main-text-font: 'PT Sans', sans-serif;
+  --flex-gap-small: 1rem;
 }
 
 /* FONTS-SIZES */
@@ -164,17 +165,16 @@ header{
 /* PLANT-LIST */
 
 .plant-list-container{
+  width: 100%;
   margin: 5rem 0 0 0 ;
 }
 
 .plant-list{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
   flex-wrap: wrap;
-  padding: 1rem 1rem 1rem 3rem;
+  gap: var(--flex-gap-small);
   position: relative;
+  margin: 0 auto 0 auto;
 }
 
 .plant-link:hover{
@@ -182,8 +182,7 @@ header{
 }
 
 .plant-link{
-  width: 40%;
-  max-width: 10rem;
+  width: calc(50% - var(--flex-gap-small));
   text-decoration: none;
   color: var(--main-title-text-color);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; ;
@@ -193,6 +192,7 @@ header{
 
 .plant-image{
   width: 100%;
+  height: auto;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
 }
@@ -358,8 +358,7 @@ footer img{
 
   .plant-page-content{
     display: flex;
-    justify-content: center;
-    gap: 5%;
+    /* gap: 5%; */
   }
 
   .plant-page-header{
@@ -368,6 +367,7 @@ footer img{
   }
 
   .plant-page-plant-image{
+    height: auto;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
   }
