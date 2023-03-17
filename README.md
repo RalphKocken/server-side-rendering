@@ -4,6 +4,9 @@
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 De Stekjesbieb. Een website om te laten zien welke stekjes de buurtcampus in huis heeft.
 
+<img src="https://user-images.githubusercontent.com/106448490/225852328-344f3f21-cba9-41c0-8efd-73d916834898.png" width="700">
+
+
 ## Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
