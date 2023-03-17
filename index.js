@@ -12,7 +12,6 @@ app.use(express.static('public'))
 // Maak een route voor de index
 app.get('/', (request, response) => {
   let stekjeUrl = url + '/stekjes'
-
   fetchJson(stekjeUrl).then((data) => {
     response.render('index', data)
   })

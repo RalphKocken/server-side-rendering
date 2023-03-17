@@ -4,7 +4,7 @@
 <section class="plant-page-content">
 
     <section class="plant-page-header">
-        <img class="plant-page-plant-image" src="<%= stekje.fotos[0].url%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>">
+        <img class="plant-page-plant-image" src="<%= stekje.fotos[0].original%>" width="<%= stekje.fotos[0].width%>" height="<%= stekje.fotos[0].height%>">
         <h3 class="plant-page-plant-title text-box-title"><%= stekje.naam %></h3>    
     </section>
 
@@ -24,11 +24,12 @@
             <p class="text-box-text"><%= stekje.verpotten %></p>    
         </section>
 
-        <button class="button-big reserve-plant-button">
-            <p class="reserve-plant-button-text">Deze wil ik!</p>
-        </button>
-
+   
     </section>
+
+    <button class="button-big reserve-plant-button">
+        <p class="reserve-plant-button-text">Deze wil ik!</p>
+    </button>
 
 </section>
 

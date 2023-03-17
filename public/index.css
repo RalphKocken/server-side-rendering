@@ -165,16 +165,19 @@ header{
 /* PLANT-LIST */
 
 .plant-list-container{
-  width: 100%;
+  width: 100vw;
   margin: 5rem 0 0 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .plant-list{
+  width: 90vw;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--flex-gap-small);
+  gap: 1rem;
   position: relative;
-  margin: 0 auto 0 auto;
 }
 
 .plant-link:hover{
@@ -182,7 +185,7 @@ header{
 }
 
 .plant-link{
-  width: calc(50% - var(--flex-gap-small));
+  flex: 1 1 40%;
   text-decoration: none;
   color: var(--main-title-text-color);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; ;
@@ -190,11 +193,20 @@ header{
   transition: 0.2s;
 }
 
+/* LELIJK */
+.plant-link:nth-child(odd):last-child{
+  flex: 0 0 calc(50% - (0.5 * var(--flex-gap-small)));
+}
+
 .plant-image{
   width: 100%;
   height: auto;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+}
+
+.plant-link:last-of-type{
+  margin-right: auto;
 }
 
 .plant-title{
@@ -233,7 +245,6 @@ header{
   max-width: 100%;
 }
 
-
 /* FOOTER */
 
 footer{
@@ -256,6 +267,7 @@ footer img{
 
 .plant-page-plant-image{
   width: 100%;
+  height: auto;
   max-width: 30rem;
 }
 
@@ -271,6 +283,11 @@ footer img{
   margin: 2rem auto 0 auto;
 }
 
+.reserve-plant-button{
+  margin: 0 auto;
+  width: 10rem;
+  height: 6rem;
+}
 
 @media only screen and (min-width: 678px){
   
@@ -325,16 +342,25 @@ footer img{
   .plant-list{
     display: flex;
     width: 100%;
+    height: fit-content;
     flex-wrap: nowrap;
     gap: 2rem;
     overflow-x: auto;
     justify-content: flex-start;
-    padding: 2rem 2rem 2rem 5rem;
+    padding: 2rem 2rem 4rem 5rem;
   }
 
   .plant-link{
     min-width: 12rem;
+    height: 20rem;
   }
+
+    /* LELIJK */
+  .plant-link:nth-child(odd):last-child{
+    width: 12rem;
+    max-width: 12rem;
+  }
+
 
   /* GENERAL INFORMATION */
 
@@ -358,7 +384,8 @@ footer img{
 
   .plant-page-content{
     display: flex;
-    /* gap: 5%; */
+    justify-content: space-between;
+    padding: 0 0 0 4rem;
   }
 
   .plant-page-header{
@@ -379,7 +406,8 @@ footer img{
   }
 
   .plant-page-plant-info{
-    width: 20rem;
+    flex-direction: row;
+    width: 50rem;
     align-items: center;
     margin: 0;
   }
