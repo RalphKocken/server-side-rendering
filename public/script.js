@@ -5,7 +5,6 @@ const interval = setInterval(slideShow, 6000)
 // const rightHandle = document.querySelector('.left-handle')
 // const leftHandle = document.querySelector('.right-handle')
 
-
 // Event Listeners
 
 // rightHandle.addEventListener("click", moveContainerRight)
